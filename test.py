@@ -25,7 +25,7 @@ driver = webdriver.Chrome()
 #     passwordBox.send_keys(password)
 #     signIn.click()
 #
-# login("nirooz@rocketmail.com", "Nirooshan96")
+# login("nirooz@rocketmail.com", "Niroo100996")
 
 def addToCart():
     productUrl = "https://www.nakedcph.com/adidas-originals-overkill-x-fruition-x-adidas-consortium-tubular-elastic-cm8003/p/5552"
