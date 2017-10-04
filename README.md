@@ -1,4 +1,4 @@
-# Naked Niroo Bot for NakedCPH
+# /// Naked /// Niroo /// - Autocheckout Bot for NakedCPH
 
 *NOTE: This program is made for Python 2.X.X!
 
