@@ -1,0 +1,31 @@
+{
+  "exec_config": {
+    "refresh_time": 2,
+    "drop_timer": "10:00:00",
+    "use_proxies": true
+  },
+  "site_config": {
+    "base_url": "https://www.minishopmadrid.com",
+    "early_link": "",
+    "dummy_link": "",
+    "positive_kw": "yeezy,zebra,350",
+    "negative_kw": "infant",
+    "size": "US 9"
+  },
+  "checkout": {
+    "fname": "Fake",
+    "lname": "Fake",
+    "email": "fake@me.com",
+    "phone": "(573) 123-1234",
+    "addr1": "456 Fake St",
+    "addr2": "",
+    "city": "New York City",
+    "state": "New York",
+    "zip": "12345",
+    "g-response":"",
+    "cc": "1234123412341234",
+    "exp_m": "05",
+    "exp_y": "2022",
+    "cvv": "123"
+  }
+}
