@@ -4,37 +4,32 @@ import requests
 from selenium import webdriver
 import logging
 
-headers = {
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) '
-                          'Chrome/58.0.3029.81 Safari/537.36'
-}
-
 tasks = open("tasks/taskNiroo.json")
 orders = json.loads(tasks.read())["login"]
 
-driver = webdriver.Chrome()
+def login():
+    with requests.Session() as c:
+        loginUrl = ("https://www.nakedcph.com/auth/view")
+        email = "nirooz@rocketmail.com"
+        password = "Nirooshan96"
+        c.get(loginUrl)
+        csrftoken = c.cookies['_AntiCsrfToken']
+        login_data = dict(_AntiCsrfToken=csrftoken, email=email, password=password, next='/')
+        c.post(loginUrl, data=login_data, headers={
+            'Referer': 'https://www.nakedcph.com/auth/view','User-Agent': 'Mozilla/5.0 (Windows NT 10.0;Win64;x64) AppleWebKit/537.36(KHTML, like Gecko) Chrome/61.0.3163.100Safari / 537.36'})
+        page = c.get('https://www.nakedcph.com/')
+        print(page.content)
 
-# def login(email, password):
-#     url = "https://www.nakedcph.com/auth/view"
-#     driver.get(url)
-#     emailBox = driver.find_element_by_xpath('//*[@id="emailInput"]')
-#     passwordBox = driver.find_element_by_xpath('//*[@id="passwordInput"]')
-#     signIn = driver.find_element_by_xpath('//*[@id="auth"]/form/span/button')
-#
-#     emailBox.send_keys(email)
-#     passwordBox.send_keys(password)
-#     signIn.click()
-#
-# login("nirooz@rocketmail.com", "Nirooshan96")
 
-def addToCart():
-    productUrl = "https://www.nakedcph.com/adidas-originals-overkill-x-fruition-x-adidas-consortium-tubular-elastic-cm8003/p/5552"
-    driver.get(productUrl)
-    commodityDiv = driver.find_element_by_xpath('//*[@id="product-form"]')
-    sizeSelection = commodityDiv.find_element_by_xpath('//*[@id="product-form"]/div[2]/div/select/option[8]')
-    sizeSelection.click()
-    addButton = commodityDiv.find_element_by_xpath('//*[@id="product-form"]/div[2]/span/button')
-    addButton.click()
-    checkoutButton = commodityDiv.find_element_by_xpath('//*[@id="product-form"]/div[2]/a')
-    checkoutButton.click()
-addToCart()
+# def addToCart():
+#     driver = webdriver.Chrome()
+#     productUrl = "https://www.nakedcph.com/adidas-originals-overkill-x-fruition-x-adidas-consortium-tubular-elastic-cm8003/p/5552"
+#     driver.get(productUrl)
+#     commodityDiv = driver.find_element_by_xpath('//*[@id="product-form"]')
+#     sizeSelection = commodityDiv.find_element_by_xpath('//*[@id="product-form"]/div[2]/div/select/option[8]')
+#     sizeSelection.click()
+#     addButton = commodityDiv.find_element_by_xpath('//*[@id="product-form"]/div[2]/span/button')
+#     addButton.click()
+#     checkoutButton = commodityDiv.find_element_by_xpath('//*[@id="product-form"]/div[2]/a')
+#     checkoutButton.click()
+# addToCart()
