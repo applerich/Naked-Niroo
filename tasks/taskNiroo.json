@@ -1,12 +1,12 @@
 {
-    "payload": {
+    "loginpayload": {
         "email": "nirooz@rocketmail.com",
         "password": "Niroo100996"
     },
 
     "products": {
-        "url": "https://www.nakedcph.com/adidas-originals-overkill-x-fruition-x-adidas-consortium-tubular-elastic-cm8003/p/5552",
-        "size": "40",
+        "url": "https://www.nakedcph.com/adidas-originals-adidas-originals-by-alexander-wang-inout-joggers-ii-cv5300/p/5628",
+        "size": "M",
         "quantity": 1
     },
 
@@ -14,5 +14,37 @@
         "credit_card_number": "4111111111111111",
         "credit_card_expiration": "09/20",
         "credit_card_crn": "234"
+    },
+
+    "pay": {
+        "paymentAmount": "18000",
+        "currencyCode": "EUR",
+        "skinCode": "SfaF16TW",
+        "merchantReference": "174618",
+        "shopperIP":"110.22.25.254",
+        "shopperReference": "124363",
+        "shopperEmail":"nirooz@rocketmail.com",
+        "merchantAccount":"NakedCOM",
+        "sessionValidity":"2017-10-07T01:39:12Z",
+        "shipBeforeDate": "2017-10-14T01:29:12Z",
+        "allowedMethods" : "visa,maestro,mc,electron",
+        "resURL": "https://www.nakedcph.com/adyen/return",
+        "countryCode": "AU",
+        "merchantOrderReference": "128193",
+        "shopper.firstName": "Nirooshan",
+        "shopper.lastName": "Arjuna",
+        "shopper.gender": "UNKNOWN",
+        "shopper.telephoneNumber": "0451425315",
+        "riskdata.deliveryMethod": "Panagora.ShippingProvider.Webshipr",
+        "merchantSig": "pAZAyXrWYLpyYOUztBJdc/r7Qso=",
+        "shopperSig": "ds4MPz8Vofrqkxi3LEfd8G8jQYs=",
+        "riskdata.sig": "YfyhT59vdY4BW0Qlwy0Y5bDwRp0=",
+        "shopperLocale":"en",
+        "orderData": "H4sIAAAAAAAEAKWQwQrCMBBE74L/sOReTLX2VAMePFrE6gekTdDF2sRNivbvTaWCB3sQb293ZpdhMi/LWkNVS+dWzJDSFKHXV8fEdAKQ+dKo7oX9QAP1rN5HSruK0Ho0DRMpX8bxHFK+gAhyvGgorCHv7lpS2KyRYCsfsKtbB4ccEp7NvPr29dbKxqPvmIjHLJaw0kFPOGyO+w9XQPohc3FGa7E5/R9lPEmAoclAfeXiCb8uQ8t6AQAA",
+        "billingAddress.street": "32A Talbot Road",
+        "billingAddress.city": "Mount Waverley",
+        "billingAddress.postalCode": "3149",
+        "billingAddress.country": "AU",
+        "billingAddressSig": "u5aM13pp/ZGI1M5JBhPJWcJU654="
     }
 }

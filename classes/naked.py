@@ -4,12 +4,6 @@ from json import load
 import requests
 import threading
 from time import time, sleep
-from selenium import webdriver
-from selenium.webdriver.support.select import Select
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
 from classes.logger import Logger
 
 logger = Logger()
@@ -18,22 +12,22 @@ log = logger.log
 # requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 class Naked(threading.Thread):
-    def __init__(self, thread_id, task_file, proxy_manager):
-        threading.Thread.__init__(self)
-        self.start_time = time()
-        Logger.set_tid(thread_id)
-        self.S = requests.Session()
-        with open('config.json') as cfg:
-            self.c = load(cfg)
-        with open(task_file) as tsk:
-            self.t = load(tsk)
-        if self.t['exec_config']['use_proxies']:
-            proxy = proxy_manager.get_next_proxy()
-            log('[{}] adding proxy to task'.format(proxy), color='blue')
-            p = {
-                'http': 'http://{}'.format(proxy),
-                'https': 'https://{}'.format(proxy)
-            }
+                def __init__(self, thread_id, task_file, proxy_manager):
+                threading.Thread.__init__(self)
+                self.start_time = time()
+                Logger.set_tid(thread_id)
+                self.S = requests.Session()
+                with open('config.json') as cfg:
+                    self.c = load(cfg)
+                with open(task_file) as tsk:
+                    self.t = load(tsk)
+                if self.t['exec_config']['use_proxies']:
+                    proxy = proxy_manager.get_next_proxy()
+                    log('[{}] adding proxy to task'.format(proxy), color='blue')
+                    p = {
+                        'http': 'http://{}'.format(proxy),
+                        'https': 'https://{}'.format(proxy)
+                    }
 
             self.S.proxies = p
         self.headers = {

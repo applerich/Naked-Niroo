@@ -26,7 +26,6 @@ def main():
 
         
         '\nCreated by Niroo @NirooOfficial'
-        '\nCredits to Brandon Ruggles (brandonrninefive@gmail.com)'
         '\nCredits to Shevi @Shevids1996\n\n'
     
     

@@ -4,8 +4,10 @@
       <w>csrf</w>
       <w>csrftoken</w>
       <w>khtml</w>
+      <w>loginpayload</w>
       <w>loginurl</w>
       <w>nirooshan</w>
+      <w>recaptcha</w>
       <w>referer</w>
     </words>
   </dictionary>
